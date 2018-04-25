@@ -1,6 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {Router} from '@angular/router';
+import {Inject} from '@angular/compiler/src/core';
 
 @Component({
   selector: 'app-search-box',
@@ -11,17 +12,21 @@ export class SearchBoxComponent implements OnInit {
 
   searchBoxControl: FormControl = new FormControl();
 
+  @Input() public phrase;
+
   constructor(private router: Router) {
   }
 
   ngOnInit() {
+    if (this.phrase) {
+      this.searchBoxControl.setValue(this.phrase);
+    }
   }
 
   public search() {
     const value = this.searchBoxControl.value;
     if (value) {
-      this.router.navigate([`/search`, {phrase: value}]);
-      console.log(this.searchBoxControl.value);
+      this.router.navigate([`/search/${value}`]);
     }
   }
 
