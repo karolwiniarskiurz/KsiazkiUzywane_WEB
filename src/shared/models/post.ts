@@ -1,18 +1,18 @@
 // todo composition?
 export class Post {
-  Id: number;
-  AuthorName: string;
-  DateOfPosting: Date;
-  Telephone: string;
-  Email: string;
-  Adress: string;
-  Photos: string[];
-  Title: string;
-  Description: string;
+  id: number;
+  authorName: string;
+  dateOfPosting: Date;
+  telephone: string;
+  email: string;
+  adress: string;
+  photos: string[];
+  title: string;
+  description: string;
   // todo make an enum
-  StateOfBook: string;
-  BookAuthor: string;
+  stateOfBook: string;
+  bookAuthor: string;
   // todo mb change to date(?)
-  PublishDate: string;
-  Price: number;
+  publishDate: string;
+  price: number;
 }
