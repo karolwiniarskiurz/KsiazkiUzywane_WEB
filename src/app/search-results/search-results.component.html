@@ -4,3 +4,4 @@
 <div *ngFor="let post of posts">
   <app-post-short (click)="goToFullPost(post.id)" [post]="post"></app-post-short>
 </div>
+<p>{{totalPages}}, {{currentPage}}, {{itemsPerPage}}</p>
