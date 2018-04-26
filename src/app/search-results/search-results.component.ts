@@ -14,11 +14,7 @@ export class SearchResultsComponent implements OnInit {
 
   public posts: Post[] = [];
 
-  public currentPage = 1;
-
-  public totalPages;
-
-  public itemsPerPage;
+  public page = 1;
 
   constructor(private route: ActivatedRoute, private api: ApiService, private router: Router) {
   }
@@ -26,7 +22,7 @@ export class SearchResultsComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.phrase = params['phrase'];
-      this.search();
+        this.search();
     });
 
   }
@@ -37,11 +33,9 @@ export class SearchResultsComponent implements OnInit {
   }
 
   public search() {
-    this.api.search(this.phrase, this.currentPage).subscribe(ok => {
-      this.posts = ok['posts'];
-      this.currentPage = ok['currentPage'];
-      this.itemsPerPage = ok['itemsPerPage'];
-      this.totalPages = ok['totalPages'];
+    this.api.search(this.phrase, this.page).subscribe(ok => {
+      this.posts = ok;
+      console.log(this.posts);
     });
   }
 }
