@@ -10,8 +10,10 @@ import {SearchBoxComponent} from './searchbox/search-box.component';
 import {HomeComponent} from './home/home.component';
 import {RouterModule} from '@angular/router';
 import {SearchResultsComponent} from './search-results/search-results.component';
-import {PostFullComponent} from './searchbox/post-full/post-full.component';
-import {PostShortComponent} from './searchbox/post-short/post-short.component';
+import {PostFullComponent} from './search-results/post-full/post-full.component';
+import {PostShortComponent} from './search-results/post-short/post-short.component';
+import {ApiService} from '../shared/services/api.service';
+import {HttpClientModule} from '@angular/common/http';
 import {AddPostFormComponent} from './add-post-form/add-post-form.component';
 
 
@@ -35,6 +37,7 @@ import {AddPostFormComponent} from './add-post-form/add-post-form.component';
     ReactiveFormsModule,
     FormsModule,
     MatSelectModule,
+    HttpClientModule,
     RouterModule.forRoot([
       {path: '', component: HomeComponent, pathMatch: 'full'},
       {path: 'add', component: AddPostFormComponent},
@@ -42,7 +45,7 @@ import {AddPostFormComponent} from './add-post-form/add-post-form.component';
       {path: 'post/:id', component: PostFullComponent}
     ])
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
