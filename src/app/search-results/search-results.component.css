@@ -1,0 +1,13 @@
+.search-box-result
+{
+    width:100%;
+    text-align: center;
+}
+
+.post
+{
+    margin: 0 auto;
+    background-color: white;
+    width:80%;
+    box-shadow: 4px 4px 3px #b6b6b6;
+}

@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import {MatAutocompleteModule, MatButtonModule, MatFormFieldModule, MatInputModule} from '@angular/material';
+import {MatAutocompleteModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatSelectModule} from '@angular/material';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { SearchBoxComponent } from './searchbox/search-box.component';
@@ -12,6 +12,7 @@ import {RouterModule} from '@angular/router';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { PostFullComponent } from './searchbox/post-full/post-full.component';
 import { PostShortComponent } from './searchbox/post-short/post-short.component';
+import { AddPostFormComponent } from './add-post-form/add-post-form.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { PostShortComponent } from './searchbox/post-short/post-short.component'
     HomeComponent,
     SearchResultsComponent,
     PostFullComponent,
-    PostShortComponent
+    PostShortComponent,
+    AddPostFormComponent
   ],
   imports: [
     BrowserModule,
@@ -32,8 +34,10 @@ import { PostShortComponent } from './searchbox/post-short/post-short.component'
     MatAutocompleteModule,
     ReactiveFormsModule,
     FormsModule,
+    MatSelectModule,
     RouterModule.forRoot([
       {path: '', component: HomeComponent, pathMatch: 'full'},
+      {path: 'add', component: AddPostFormComponent},
       {path: 'search', component: SearchResultsComponent}
       ])
   ],

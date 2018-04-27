@@ -1,0 +1,13 @@
+.add-post-container
+{
+    background-color: white;
+    width:85%;
+    padding: 10px;
+    display:flex;
+    flex-direction: column;
+}
+
+.add-post-container mat-form-field > input
+{
+    width: 0%;
+}
