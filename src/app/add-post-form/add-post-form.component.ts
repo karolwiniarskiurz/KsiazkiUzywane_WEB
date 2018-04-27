@@ -8,14 +8,14 @@ import { Post } from '../../shared/models/post';
 })
 export class AddPostFormComponent implements OnInit {
 
-  model: any = {};
+  model: Post = new Post();
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  addPost() {
+  public addPost() {
       console.log('asd');
   }
 }
