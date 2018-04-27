@@ -25,7 +25,7 @@ export class SearchBoxComponent implements OnInit {
 
   public search() {
     const value = this.searchBoxControl.value;
-    if (value) {
+    if (value && (value as string).length > 3) {
       this.router.navigate([`/search/${value}`]);
     }
   }

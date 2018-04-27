@@ -6,8 +6,8 @@ import {Observable} from 'rxjs/Observable';
 @Injectable()
 export class ApiService {
 
-  private apiUrl = 'http://karoldevblog.me/api/post';
-  // private apiUrl = 'http://localhost:5000/api/post';
+  // private apiUrl = 'http://karoldevblog.me/api/post';
+  private apiUrl = 'http://localhost:5000/api/post';
 
   constructor(private http: HttpClient) {
   }
@@ -16,7 +16,7 @@ export class ApiService {
     return this.http.get<Post>(`${this.apiUrl}/${id}`);
   }
 
-  public add(post: Post) {
+  public add(post: Post): Observable<any> {
     return this.http.post(this.apiUrl, post);
   }
 

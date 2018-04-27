@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Post } from '../../shared/models/post';
+import {Component, OnInit} from '@angular/core';
+import {Post} from '../../shared/models/post';
+import {ApiService} from '../../shared/services/api.service';
 
 @Component({
   selector: 'app-add-post-form',
@@ -10,12 +11,18 @@ export class AddPostFormComponent implements OnInit {
 
   model: Post = new Post();
 
-  constructor() { }
+  constructor(private api: ApiService) {
+  }
 
   ngOnInit() {
   }
 
   public addPost() {
-      console.log('asd');
+    this.api.add(this.model).subscribe(ok => {
+      // todo modal?
+      alert('Dodano ogłoszenie');
+    }, error => {
+      alert('Wystąpił bład');
+    });
   }
 }
