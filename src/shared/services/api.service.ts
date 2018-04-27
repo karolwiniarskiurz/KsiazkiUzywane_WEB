@@ -6,8 +6,8 @@ import {Observable} from 'rxjs/Observable';
 @Injectable()
 export class ApiService {
 
-  // private apiUrl = 'http://karoldevblog.me/api/post';
-  private apiUrl = 'http://localhost:5000/api/post';
+  private apiUrl = 'http://karoldevblog.me/api/post';
+  // private apiUrl = 'http://localhost:5000/api/post';
 
   constructor(private http: HttpClient) {
   }
