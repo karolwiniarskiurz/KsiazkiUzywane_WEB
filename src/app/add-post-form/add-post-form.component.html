@@ -1,0 +1,56 @@
+<div class="add-post-container">
+  <form (submit)="addPost()" name="add-post-form">
+  <mat-form-field>
+    <input name="AuthorName" matInput placeholder="Imie i nazwisko" [(ngModel)]="model.AuthorName">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Numer telefonu" [(ngModel)]="model.Telephone">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="email" placeholder="Email" [(ngModel)]="model.Email">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Adres zamieszkania" [(ngModel)]="model.Adress">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="text" placeholder="Załaduj zdjęcia" [(ngModel)]="model.Photos">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Tytuł" [(ngModel)]="model.Title">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Opis" [(ngModel)]="model.Description">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select placeholder="Stan książki" [(ngModel)]="model.StateOfBook">
+      <mat-option value="0">Nowa</mat-option>
+      <mat-option value="1">Lekko używana</mat-option>
+      <mat-option value="2">Używana</mat-option>
+      <mat-option value="3">Zniszczona</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Autor książki" [(ngModel)]="model.BookAuthor">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Rok wydania" [(ngModel)]="model.PublishDate">
+  </mat-form-field>
+
+  <mat-form-field>
+      <input matInput placeholder="Cena" [(ngModel)]="model.Price">
+  </mat-form-field>
+
+      <button mat-raised-button type="submit">Dodaj</button>
+
+</form>
+
+</div>

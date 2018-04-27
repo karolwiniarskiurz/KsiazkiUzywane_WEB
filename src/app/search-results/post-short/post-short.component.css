@@ -1,0 +1,19 @@
+.post-container
+{
+    width: 85%;
+    padding: 5px;
+    max-height: 200px;
+}
+
+.post-photo
+{
+    width: 100px;
+    height: 100px;
+}
+
+.post-container > p
+{
+    display: flex;
+    flex-direction: row;
+
+}
