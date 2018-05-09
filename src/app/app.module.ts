@@ -15,6 +15,7 @@ import {PostShortComponent} from './search-results/post-short/post-short.compone
 import {ApiService} from '../shared/services/api.service';
 import {HttpClientModule} from '@angular/common/http';
 import {AddPostFormComponent} from './add-post-form/add-post-form.component';
+import { AddbuttonComponent } from './addbutton/addbutton.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import {AddPostFormComponent} from './add-post-form/add-post-form.component';
     SearchResultsComponent,
     PostFullComponent,
     PostShortComponent,
-    AddPostFormComponent
+    AddPostFormComponent,
+    AddbuttonComponent
   ],
   imports: [
     BrowserModule,

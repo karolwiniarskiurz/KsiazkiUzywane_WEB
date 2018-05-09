@@ -16,7 +16,7 @@ export class ApiService {
     return this.http.get<Post>(`${this.apiUrl}/${id}`);
   }
 
-  public add(post: Post) {
+  public add(post: Post): Observable<any> {
     return this.http.post(this.apiUrl, post);
   }
 
