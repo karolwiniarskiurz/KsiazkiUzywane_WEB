@@ -1,53 +1,54 @@
 <div class="add-post-container">
+  <a href="">
+    <div class="back-to-main-page">Powrót</div>
+  </a>
   <form (submit)="addPost()" name="add-post-form">
     <mat-form-field>
-      <input name="AuthorName" matInput placeholder="Imie i nazwisko" [(ngModel)]="model.authorName">
+      <input name="AuthorName" matInput placeholder="Imie i nazwisko" [(ngModel)]="model.AuthorName">
     </mat-form-field>
 
     <mat-form-field>
-      <input name="telephone" matInput placeholder="Numer telefonu" [(ngModel)]="model.telephone">
+      <input name = "Telephone" matInput placeholder="Numer telefonu" [(ngModel)]="model.Telephone">
     </mat-form-field>
 
     <mat-form-field>
-      <input name="email" matInput type="email" placeholder="Email" [(ngModel)]="model.email">
+      <input name = "Email" matInput type="email" placeholder="Email" [(ngModel)]="model.Email">
     </mat-form-field>
 
     <mat-form-field>
-      <input name="adress" matInput placeholder="Adres zamieszkania" [(ngModel)]="model.adress">
+      <input name = "Adress" matInput placeholder="Adres zamieszkania" [(ngModel)]="model.Adress">
     </mat-form-field>
 
     <mat-form-field>
-      <input name="photos" matInput placeholder="Załaduj zdjęcia" [(ngModel)]="model.photos">
+      <input name = "Photos" matInput type="text" placeholder="Załaduj zdjęcia" [(ngModel)]="model.Photos">
     </mat-form-field>
 
     <mat-form-field>
-      <input name="title" matInput placeholder="Tytuł" [(ngModel)]="model.title">
+      <input name="Titles" matInput placeholder="Tytuł" [(ngModel)]="model.Title">
     </mat-form-field>
 
     <mat-form-field>
-      <textarea name="description" matInput placeholder="Opis" [(ngModel)]="model.description"></textarea>
+      <input name = "Description" matInput placeholder="Opis" [(ngModel)]="model.Description">
     </mat-form-field>
 
     <mat-form-field>
-      <mat-select name="stateOfBook" placeholder="Stan książki" [(ngModel)]="model.stateOfBook">
-        <mat-option  value="0">Nowa</mat-option>
+      <mat-select name="StateOfBook" placeholder="Stan książki" [(ngModel)]="model.StateOfBook">
+        <mat-option value="0">Nowa</mat-option>
         <mat-option value="1">Lekko używana</mat-option>
         <mat-option value="2">Używana</mat-option>
         <mat-option value="3">Zniszczona</mat-option>
       </mat-select>
     </mat-form-field>
-
-
     <mat-form-field>
-      <input name="bookAuthor" matInput placeholder="Autor książki" [(ngModel)]="model.bookAuthor">
+      <input name = "BookAuthor" matInput placeholder="Autor książki" [(ngModel)]="model.BookAuthor">
     </mat-form-field>
 
     <mat-form-field>
-      <input name="publishDate" matInput placeholder="Rok wydania" [(ngModel)]="model.publishDate">
+      <input name="PublishDate" matInput placeholder="Rok wydania" [(ngModel)]="model.PublishDate">
     </mat-form-field>
 
     <mat-form-field>
-      <input name="price" type="number" matInput placeholder="Cena" [(ngModel)]="model.price">
+      <input name = "Price" matInput placeholder="Cena" [(ngModel)]="model.Price">
     </mat-form-field>
 
     <button mat-raised-button type="submit">Dodaj</button>
