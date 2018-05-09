@@ -1,6 +1,6 @@
 <form class="example-form" (submit)="search()">
     <mat-form-field class="example-full-width">
-      <input type="text" placeholder="np. Pan Tadeusz" aria-label="Number" matInput [formControl]="searchBoxControl">
+      <input (class)="classes" type="text" placeholder="np. Pan Tadeusz" aria-label="Number" matInput [formControl]="searchBoxControl">
     </mat-form-field>
     <button mat-raised-button type="submit">Szukaj</button>
 </form>

@@ -1,13 +1,12 @@
 <a routerLink="add" style="color:black">
   <button mat-raised-button style="float: right;margin: 15px;">
-    Dodaj ogłoszenie
-  </button>
+    Dodaj ogłoszenie</button>
 </a>
 <div class="container">
   <div class="search-box-result">
-    <app-search-box [phrase]="phrase"></app-search-box>
+    <app-search-box></app-search-box>
   </div>
-  <div *ngFor="let post of posts">
-    <app-post-short (click)="goToFullPost(post.id)" [post]="post"></app-post-short>
+  <div *ngFor="let post of posts" class="post">
+    <app-post-short [post]="post"></app-post-short>
   </div>
 </div>
