@@ -1,7 +1,7 @@
 <div class="add-post-container">
-  <a href="">
-    <div class="back-to-main-page">Powrót</div>
-  </a>
+
+    <div (click)="navigateHome()" class="back-to-main-page">Powrót</div>
+
   <form (submit)="addPost()" name="add-post-form">
     <mat-form-field>
       <input name="AuthorName" matInput placeholder="Imie i nazwisko" [(ngModel)]="model.AuthorName">

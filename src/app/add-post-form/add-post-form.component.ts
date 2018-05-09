@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Post} from '../../shared/models/post';
 import {ApiService} from '../../shared/services/api.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-add-post-form',
@@ -11,7 +12,7 @@ export class AddPostFormComponent implements OnInit {
 
   model: Post = new Post();
 
-  constructor(private api: ApiService) {
+  constructor(private api: ApiService, private router: Router) {
   }
 
   ngOnInit() {
@@ -24,5 +25,9 @@ export class AddPostFormComponent implements OnInit {
     }, error => {
       alert('Wystąpił bład');
     });
+  }
+
+  navigateHome() {
+    this.router.navigate(['']);
   }
 }
